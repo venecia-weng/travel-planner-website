@@ -1,0 +1,103 @@
+/* Attraction Detail Styles */
+.attraction-img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Star Rating Styles */
+.star-rating {
+    color: #ffc107;
+    margin-right: 0.5rem;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label {
+    position: relative;
+    width: 1.1em;
+    font-size: 2rem;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+.rating > label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+    opacity: 1 !important;
+}
+
+.rating > input:checked ~ label:before {
+    opacity: 1;
+}
+
+.rating:hover > input:checked ~ label:before {
+    opacity: 0.4;
+}
+
+/* Attraction Card Styles */
+.attraction-card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+}
+
+.attraction-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Similar Attractions */
+.similar-attraction {
+    transition: background-color 0.3s ease;
+}
+
+.similar-attraction:hover {
+    background-color: #f8f9fa;
+}
+
+/* Alert Messages */
+.alert-float {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    max-width: 350px;
+}
+
+/* Maps placeholder */
+.map-placeholder {
+    background-color: #e9ecef;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
